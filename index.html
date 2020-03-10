@@ -17,6 +17,7 @@
 </head>
 
 <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
   <header class="main-navigation">
     <div class="container nav-container">
@@ -29,7 +30,7 @@
       </nav>
     </div>
   </header>
-     
+
   <div class="container home">
     <header class="intro">
       <img src="img/fun-bus.jpg" alt="bus in the sand">
@@ -38,12 +39,13 @@
     </header>
     <section class="content-section">
       <div class="text-content">
-        <h2>Let's Go!</h2>
+        <h2 id="drag1" draggable="true" ondragstart="drag(event)" >Let's Go!</h2>
         <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       </div>
       <div class="img-content">
-        <img src="img/adventure.jpg" alt="Let's go on an adventure!">
+        <img draggable="true" src="img/adventure.jpg" alt="Let's go on an adventure!">
       </div>
     </section>
     <section class="content-section inverse-content">
@@ -55,12 +57,14 @@
         <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
       </div>
-     
+
     </section>
     <section class="content-destination">
       <h2>Pick Your Destination</h2>
       <p>Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
       <img src="img/destination.jpg" alt="Second slide">
+      Email <input type="email" id="email">
+      Select Me <input value="Try selecting some text in this element."> <span id="log"></span>
     </section>
     <section class="content-pick">
 

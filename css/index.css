@@ -253,6 +253,13 @@ img {
     padding: 0;
   }
 }
+.home .content-section .text-content #div1 {
+  width: 200px;
+  height: 50px;
+  background: MediumSeaGreen;
+  margin-bottom: 10px;
+  padding: 10px;
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
