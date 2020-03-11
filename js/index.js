@@ -1,4 +1,9 @@
 //mouseover on logo
+navOne.addEventListener("click", ev => {
+  ev.preventDefault();
+  whole.innerHTML = "";
+});
+
 const logoEl = document.querySelector("h1");
 logoEl.addEventListener("mouseover", event => {
   event.target.style.color = "DodgerBlue";
@@ -16,12 +21,16 @@ function allowDrop(ev) {
   ev.preventDefault();
 }
 function drag(ev) {
+  //get id
   ev.dataTransfer.setData("Text", ev.target.id);
 }
 function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("Text");
-  ev.target.appendChild(document.getElementById(data));
+  const id = event.dataTransfer.getData("text");
+  //get the element
+  const draggableElement = document.getElementById(id);
+  const div1 = event.target;
+  div1.appendChild(draggableElement);
+  event.dataTransfer.clearData();
 }
 
 //  dblclick
@@ -70,3 +79,4 @@ window.addEventListener("scroll", event => {
 });
 
 //gsap
+TweenLite.fromTo("h1", 3, { opacity: 0 }, { opacity: 1 });
